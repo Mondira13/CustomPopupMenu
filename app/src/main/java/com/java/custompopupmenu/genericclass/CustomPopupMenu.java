@@ -44,6 +44,7 @@ public class CustomPopupMenu {
 
     public void showPopupMenu() {
         popupWindow = generatePopupMenuWithIcon();
+        popupWindow.setAnimationStyle(R.style.animationName);
         popupWindow.showAsDropDown(menuIcon, -40, 18); // where u want show on view click event popupWindow.showAsDropDown(view, x, y);
         popupMenuOnClickListener();
     }
