@@ -18,6 +18,7 @@
         android:layout_height="30dp"
         tools:ignore="ContentDescription"
         tools:src="@mipmap/ic_launcher"
+        android:layout_margin="4dp"
         />
 
     <TextView
