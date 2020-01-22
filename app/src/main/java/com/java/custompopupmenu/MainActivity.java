@@ -38,12 +38,23 @@ public class MainActivity extends AppCompatActivity {
         menuFive = findViewById(R.id.menuIcon5);
     }
 
+//    private void setData() {
+//        popupItems = new ArrayList<>();
+//        popupItems.add(new PopupItem("1", "Home", R.drawable.ic_home));
+//        popupItems.add(new PopupItem("2", "Setting", R.drawable.ic_settings));
+//        popupItems.add(new PopupItem("3", "Call", R.drawable.ic_call));
+//        popupItems.add(new PopupItem("4", "Log Out", R.drawable.ic_power));
+//    }
+
     private void setData() {
         popupItems = new ArrayList<>();
-        popupItems.add(new PopupItem("1", "Home", R.drawable.ic_home));
-        popupItems.add(new PopupItem("2", "Setting", R.drawable.ic_settings));
-        popupItems.add(new PopupItem("3", "Call", R.drawable.ic_call));
-        popupItems.add(new PopupItem("4", "Log Out", R.drawable.ic_power));
+        popupItems.add(new PopupItem("1", "Add Task", R.drawable.ic_add_task));
+        popupItems.add(new PopupItem("2", "Add To Client", R.drawable.ic_add_client));
+        popupItems.add(new PopupItem("3", "Edit", R.drawable.ic_edit));
+        popupItems.add(new PopupItem("4", "Delete", R.drawable.ic_delete));
+        popupItems.add(new PopupItem("5", "View Lead Task History", R.drawable.ic_view_task_history));
+        popupItems.add(new PopupItem("6", "Add Sales Form", R.drawable.ic_add_sales_form));
+        popupItems.add(new PopupItem("7", "View Sales Form", R.drawable.ic_view_sales_form));
     }
 
     private void onClickListener() {
