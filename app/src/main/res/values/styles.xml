@@ -13,4 +13,9 @@
         <item name="android:windowExitAnimation">@anim/animation_off</item>
     </style>
 
+    <style name="newAnimationName" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_annimation_on</item>
+        <item name="android:windowExitAnimation">@anim/bottom_annimation_off</item>
+    </style>
+
 </resources>

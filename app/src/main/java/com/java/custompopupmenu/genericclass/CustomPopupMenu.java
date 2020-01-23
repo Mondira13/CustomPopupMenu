@@ -2,6 +2,9 @@ package com.java.custompopupmenu.genericclass;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -45,7 +48,16 @@ public class CustomPopupMenu {
     public void showPopupMenu() {
         popupWindow = generatePopupMenuWithIcon();
         popupWindow.setAnimationStyle(R.style.animationName);
-        popupWindow.showAsDropDown(menuIcon, -40, 18); // where u want show on view click event popupWindow.showAsDropDown(view, x, y);
+        popupWindow.showAsDropDown(menuIcon,Gravity.NO_GRAVITY, -40, 18); // where u want show on view click event popupWindow.showAsDropDown(view, x, y);
+        popupMenuOnClickListener();
+    }
+
+    public void showPopupMenuFromBottom() {
+        popupWindow = generatePopupMenuWithIcon();
+        popupWindow.setAnimationStyle(R.style.newAnimationName);
+        int[] location = new int[2];
+        menuIcon.getLocationOnScreen(location);
+        popupWindow.showAtLocation(menuIcon, Gravity.NO_GRAVITY,location[0], location[1] - popupWindow.getHeight());
         popupMenuOnClickListener();
     }
 
