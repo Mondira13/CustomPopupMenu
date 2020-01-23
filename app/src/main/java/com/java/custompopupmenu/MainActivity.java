@@ -103,7 +103,40 @@ public class MainActivity extends AppCompatActivity {
         menuFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                CustomPopupMenu customPopupMenu = new CustomPopupMenu(MainActivity.this,menuFive,popupItems);
+                customPopupMenu.showPopupMenuFromBottom();
+                customPopupMenu.setOnClickListener(new CustomPopupMenu.PopupMenuClickListener() {
+                    @Override
+                    public void onClick(int position) {
+                        switch (popupItems.get(position).getId()) {
+                            case "1":
+                                Toast.makeText(MainActivity.this,"Item - 1 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            case "2":
+                                Toast.makeText(MainActivity.this,"Item - 2 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            case "3":
+                                Toast.makeText(MainActivity.this,"Item - 3 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            case "4":
+                                Toast.makeText(MainActivity.this,"Item - 4 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            case "5":
+                                Toast.makeText(MainActivity.this,"Item - 5 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            case "6":
+                                Toast.makeText(MainActivity.this,"Item - 6 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            case "7":
+                                Toast.makeText(MainActivity.this,"Item - 7 "+popupItems.get(position).getItemName(),Toast.LENGTH_SHORT).show();
+                                break;
+                            default:
+                                break;
 
+                        }
+
+                    }
+                });
             }
         });
 
